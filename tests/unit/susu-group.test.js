@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { SusuError, SusuGroup } from "../src/susu-group.js";
+import { SusuError, SusuGroup } from "../../src/domain/susu-group.js";
 
 function createGroup() {
   const group = new SusuGroup(5000);

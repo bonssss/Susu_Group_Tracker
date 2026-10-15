@@ -2,6 +2,24 @@
 
 A small JSON API for managing one rotating savings group. Members contribute a fixed amount each week, and a complete week's pot is paid to the next member in join order.
 
+## Project structure
+
+```text
+src/
+  config/                Environment variables & configuration validation
+  controllers/           HTTP request handling & response formatting
+  domain/                Core Susu business rules & invariants
+  middleware/            Global error handling & 404 route handling
+  routes/                API route definitions & router aggregation
+  services/              Application business logic & Susu state management
+  utils/                 Money parsing & formatting helper utilities
+  app.js                 Express app initialization & middleware configuration
+  server.js              Server startup, port binding & graceful shutdown
+tests/
+  unit/                  Domain, money, and service unit tests
+  integration/           End-to-end HTTP API tests
+```
+
 ## Requirements
 
 - Node.js 18 or newer
@@ -13,6 +31,10 @@ A small JSON API for managing one rotating savings group. Members contribute a f
 npm install
 npm start
 ```
+
+Alternatively:
+- Start development mode with hot-reloading: `npm run dev`
+- Direct node invocation: `node server.js` or `node src/server.js`
 
 The API listens on `http://localhost:3000` by default. Set `PORT` to use another port.
 State is held in memory, so restarting the server clears the group and its history.
