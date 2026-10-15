@@ -1,7 +1,7 @@
 {
   "name": "susu-group-tracker",
   "version": "1.0.0",
-  "description": "",
+  "description": "Rotating savings group (Susu) tracker JSON API built with Node.js and Express.",
   "homepage": "https://github.com/bonssss/Susu_Group_Tracker#readme",
   "bugs": {
     "url": "https://github.com/bonssss/Susu_Group_Tracker/issues"
@@ -13,9 +13,10 @@
   "license": "ISC",
   "author": "",
   "type": "module",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
     "test": "node --test"
   },
   "dependencies": {

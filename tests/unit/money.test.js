@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { formatMoney, parseMoney } from "../src/money.js";
+import { formatMoney, parseMoney } from "../../src/domain/money.js";
 
 test("parses whole and fractional amounts into pesewas", () => {
   assert.equal(parseMoney("50"), 5000);

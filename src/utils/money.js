@@ -1,6 +1,6 @@
 export function parseMoney(amount) {
   if (typeof amount !== "string") {
-    throw new TypeError("Money amounts must be decimal strings, such as \"50.00\".");
+    throw new TypeError('Money amounts must be decimal strings, such as "50.00".');
   }
 
   const match = /^(0|[1-9]\d*)(?:\.(\d{1,2}))?$/.exec(amount);
